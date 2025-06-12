@@ -1,0 +1,16 @@
+{
+  "sorted_houses": {
+    "Team 1": ["Towumi", "Ibistop"],
+    "Team 2": ["Ayo", "SamUltron"],
+    "Team 3": ["Adnan", "Anu", "Ramadan"],
+    "Team 4": ["Adedoyin", "Ghazali"],
+    "Team 5": ["KayFops", "Ola", "Omolade"]
+  },
+  "scores": {
+    "Team 1": 67,
+    "Team 2": 87,
+    "Team 3": 71,
+    "Team 4": 78,
+    "Team 5": 80
+  }
+}
