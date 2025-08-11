@@ -1,16 +1,22 @@
 {
-  "sorted_houses": {
-    "Team 1": ["Towumi", "Ibistop"],
-    "Team 2": ["Ayo", "SamUltron"],
-    "Team 3": ["Adnan", "Anu", "Ramadan"],
-    "Team 4": ["Adedoyin", "Ghazali"],
-    "Team 5": ["KayFops", "Ola", "Omolade"]
-  },
-  "scores": {
-    "Team 1": 67,
-    "Team 2": 87,
-    "Team 3": 71,
-    "Team 4": 78,
-    "Team 5": 80
+	"sorted_houses": {
+	  "Group 1": ["Abdul-Muqaddim", "Mahfouz", "Olayinka"],
+	  "Group 2": ["Emmanuel", "AbdulKadir", "Angel"],
+	  "Group 3": ["Patrick", "Josephine", "Ayomide"],
+	  "Group 4": ["Abdul-subur", "Kabir", "Kamaldeen"],
+	  "Group 5": ["Fuad", "Yasir", "David"],
+	  "Group 6": ["Tochukwu", "Abdulrahman", "Temitope"],
+	  "Group 7": ["Abdullahi", "Daniel", "Khalid"],
+	  "Group 8": ["SeyiFumi", "Mohammed"]
+	},
+	"scores": {
+	  "Group 1": 0,
+	  "Group 2": 0,
+	  "Group 3": 0,
+	  "Group 4": 0,
+	  "Group 5": 0,
+	  "Group 6": 0,
+	  "Group 7": 0,
+	  "Group 8": 0
+	}
   }
-}
