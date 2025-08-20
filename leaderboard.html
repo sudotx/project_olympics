@@ -16,8 +16,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
         .leaderboard {
@@ -26,27 +28,35 @@
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
             padding: 20px;
-            width: 80vw;
-            height: 80vh;
+            width: 90vw;
+            max-width: 1000px;
+            height: auto;
+            max-height: 90vh;
             overflow-y: auto;
         }
 
         h1 {
             text-align: center;
             color: #FF0000;
-            font-size: 4vw;
+            font-size: 3rem;
             text-transform: uppercase;
             margin-bottom: 20px;
         }
 
         .team {
-            display: flex;
-            justify-content: space-between;
             margin: 15px 0;
             padding: 10px;
             background-color: #000;
             border: 2px solid #00FFFF;
             border-radius: 5px;
+        }
+
+        .team-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .team-name {
@@ -58,8 +68,14 @@
             color: #FFD700;
         }
 
+        .team-players {
+            margin-top: 15px;
+        }
+
         ul {
             list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
 
         .first {
@@ -81,6 +97,112 @@
 
         .ordinal {
             text-transform: uppercase;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .leaderboard {
+                width: 95vw;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .team-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .team-name {
+                margin-bottom: 5px;
+                font-size: 0.8rem;
+                word-wrap: break-word;
+                max-width: 100%;
+            }
+
+            .team-score {
+                font-size: 0.8rem;
+                align-self: flex-end;
+            }
+
+            .position-number {
+                font-size: 1.2em;
+            }
+
+            .team-players ul li {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .leaderboard {
+                width: 98vw;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+            }
+
+            .team {
+                margin: 10px 0;
+                padding: 8px;
+                overflow: hidden;
+            }
+
+            .team-info {
+                gap: 3px;
+            }
+
+            .team-name {
+                font-size: 0.7rem;
+                margin-bottom: 5px;
+                word-wrap: break-word;
+                max-width: 100%;
+                line-height: 1.2;
+            }
+
+            .team-score {
+                font-size: 0.7rem;
+                align-self: flex-end;
+                white-space: nowrap;
+            }
+
+            .position-number {
+                font-size: 1em;
+            }
+
+            .team-players {
+                margin-top: 8px;
+            }
+
+            .team-players ul li {
+                font-size: 0.6rem;
+                margin-bottom: 2px;
+                word-wrap: break-word;
+            }
+        }
+
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            .team-name {
+                font-size: 0.6rem;
+            }
+
+            .team-score {
+                font-size: 0.6rem;
+            }
+
+            .team-players ul li {
+                font-size: 0.5rem;
+            }
         }
     </style>
 
@@ -111,17 +233,17 @@
                     const teamDiv = document.createElement('div');
                     teamDiv.className = 'team';
                     teamDiv.innerHTML = `
-                        <span class="team-name ${index === 0 ? 'first' : index === 1 ? 'second' : index === 2 ? 'third' : ''}">
-                            <span class="position-number">${index + 1}</span><span class="ordinal">${getOrdinal(index + 1)}</span> ${team}
-                        </span>
+                        <div class="team-info">
+                            <span class="team-name ${index === 0 ? 'first' : index === 1 ? 'second' : index === 2 ? 'third' : ''}">
+                                <span class="position-number">${index + 1}</span><span class="ordinal">${getOrdinal(index + 1)}</span> ${team}
+                            </span>
+                            <span class="team-score">${score} pts</span>
+                        </div>
                         <div class="team-players">
                             <ul>
-                                ${data.sorted_houses[team].map((player, playerIndex) => `
-                                <li>${player}</li>
-                                `).join('')}
-                                </ul>
-                                </div>
-                                <span class="team-score" style="color: #FFD700;">${score} pts</span>
+                                ${data.sorted_houses[team].map((player) => `<li>${player}</li>`).join('')}
+                            </ul>
+                        </div>
                     `;
                     teamsDiv.appendChild(teamDiv);
                 });
