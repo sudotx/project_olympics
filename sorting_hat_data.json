@@ -1,24 +1,60 @@
 {
 	"sorted_houses": {
-	  "Group 1": ["Mahfouz", "Olayinka", "AbdulBasit"],
-	  "Group 2": [ "Angel", "Ayomide", "Emmanuel"],
-	  "Group 3": ["Patrick", "Josephine", "Ayo"],
-	  "Group 4": ["Abdul-subur", "Kamaldeen", "Fahim"],
-	  "Group 5": ["Fuad", "Yasir", "David"],
-	  "Group 6": ["Tochukwu", "Abdulrahman", "Temitope"],
-	  "Group 7": ["Abdullahi", "Daniel", "Khalid"],
-	  "Group 8": ["SeyiFumi", "Mohammed", "Israel"],
-	  "Group 9": ["Abdul-Muqaddim", "AbdulKadir", "Kabir"]
+		"Group 1": [
+			"Mahfouz",
+			"Olayinka",
+			"AbdulBasit"
+		],
+		"Group 2": [
+			"Angel",
+			"Ayomide",
+			"Emmanuel"
+		],
+		"Group 3": [
+			"Patrick",
+			"Josephine",
+			"Ayo"
+		],
+		"Group 4": [
+			"Abdul-subur",
+			"Kamaldeen",
+			"Fahim"
+		],
+		"Group 5": [
+			"Fuad",
+			"Yasir",
+			"David"
+		],
+		"Group 6": [
+			"Tochukwu",
+			"Abdulrahman",
+			"Temitope"
+		],
+		"Group 7": [
+			"Abdullahi",
+			"Daniel",
+			"Khalid"
+		],
+		"Group 8": [
+			"SeyiFumi",
+			"Mohammed",
+			"Israel"
+		],
+		"Group 9": [
+			"Abdul-Muqaddim",
+			"AbdulKadir",
+			"Kabir"
+		]
 	},
 	"scores": {
-	  "Group 1": 17,
-	  "Group 2": 7,
-	  "Group 3": 15,
-	  "Group 4": 3,
-	  "Group 5": 0,
-	  "Group 6": 12,
-	  "Group 7": 3,
-	  "Group 8": 6,
-	  "Group 9": 0
+		"Group 1": 5,
+		"Group 2": 5,
+		"Group 3": 5,
+		"Group 4": 0,
+		"Group 5": 0,
+		"Group 6": 5,
+		"Group 7": 10,
+		"Group 8": 0,
+		"Group 9": 0
 	}
-  }
+}
